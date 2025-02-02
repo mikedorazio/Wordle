@@ -1,0 +1,224 @@
+body {
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Arial', Courier, monospace;
+    margin: 0;
+}
+
+.wotd {
+    color: blue;
+    cursor: pointer;
+}
+
+.wotd .wotdtooltip {
+    visibility: hidden;
+}
+
+/* words */
+.word {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.word > div {
+    display: block;
+    width: 54px;
+    height: 52px;
+    border: 1px solid #bbb;
+    margin: 3px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.2em;
+}
+.word > div.green {
+    --background-color: green;
+    --border-color: green;
+    animation: flip 0.5s ease forwards;
+}
+.word > div.winner {
+    --background-color: green;
+    --border-color: green;
+    animation: jump 0.5s ease forwards;
+}
+.word > div.yellow {
+    --background-color: #ddb60b;
+    --border-color: #ddb60b;
+    animation: flip 0.5s ease forwards;
+}
+.word > div.grey {
+    --background-color: grey;
+    --border-color: grey;
+    animation: flip 0.5s ease forwards;
+}
+.word > div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.word > div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.word > div:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.word > div:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.word.current > div.filled {
+    animation: bounce 0.2s ease forwards;
+}
+
+.word.current.shaken {
+    animation: shake 0.5s ease;
+}
+
+.grid-container {
+    margin: 0 auto;
+    display: grid;
+    justify-content: space-between;
+    padding: 5px;
+    max-width: 570px;
+    grid-column-gap: 0px;
+    gap: 5px;
+}
+
+.keyboard-top,
+.keyboard-middle,
+.keyboard-bottom {
+    padding: 0px;
+    margin: 0 auto;
+    display: grid;
+    min-width: 570px;
+    max-width: 570px;
+}
+
+.keyboard-top, .keyboard-middle{
+    justify-content: center;
+    grid-column-gap: 0px;
+}
+
+.keyboard-top .grey,
+.keyboard-middle .grey,
+.keyboard-bottom .grey {
+    background-color: grey;
+    color: white;
+    transition-delay: 1.5s;
+}
+.keyboard-top .yellow,
+.keyboard-middle .yellow,
+.keyboard-bottom .yellow {
+    background-color: #ddb60b;
+    color: white;
+    transition-delay: 1.5s;
+}
+.keyboard-top .green,
+.keyboard-middle .green,
+.keyboard-bottom .green {
+    background-color: green;
+    color: white;
+    transition-delay: 1.5s;
+}
+
+.keyboard-middle {
+    justify-content: center;
+    grid-column-gap: 0px;
+    gap: 2px;
+}
+
+.keyboard-bottom {
+    justify-content: center;
+    grid-column-gap: 0px;
+    gap: 2px;
+}
+
+div.keyboard-top button,
+div.keyboard-middle button,
+div.keyboard-bottom button,
+.letter-button,
+.enter-key,
+.backspace-key {
+    width: 43px;
+    height: 58px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 3px;
+    border-radius: 5px;
+    background-color: #dfdbdb;
+    border: 0px;
+    cursor: pointer;
+    vertical-align: bottom;
+    text-transform: uppercase;
+}
+
+.enter-key  {
+    width: 85px !important;
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.backspace-key {
+    width: 75px !important;
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleY(1);
+        backgound: white;
+    }
+
+    50% {
+        transform: scaleY(0);
+        background: var(--background-color);
+        color: white;  
+    }
+
+    100% {
+        transform: scaleY(1);
+        background: var(--background-color);
+        border-width: 1px;
+        color: white;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes jump {
+     0%  { transform: translateY(0px) }
+    25%  { transform: translateY(-10px) }
+    50%  { 
+        transform: translateY(10px);
+        background: var(--background-color);
+        color: white;
+    }
+    75%  { transform: translateY(-4px) }
+    100% { 
+        transform: translateY(4px);
+        background: var(--background-color);
+        color: white;
+    }
+}
