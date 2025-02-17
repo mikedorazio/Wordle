@@ -5,6 +5,7 @@ import KeyboardTop from "./KeyboardTop";
 import KeyboardMiddle from "./KeyboardMiddle";
 import KeyboardBottom from "./KeyboardBottom";
 import { toast } from "react-toastify";
+import ReactConfetti from "react-confetti";
 
 export default function Wordle({ todaysWord, wordList, hints }) {
     const { currentGuess, guessedWords, handleKeyup, turn, isCorrect, preCorrect, usedKeys, handleMouseUp } = useWordle( todaysWord, wordList );
@@ -34,6 +35,8 @@ export default function Wordle({ todaysWord, wordList, hints }) {
     }, [handleKeyup, isCorrect, turn]);
 
     return (
+        <>
+        {isCorrect && <ReactConfetti  />}
         <div className="grid-container">
             <div className="wordGrid">
                 <WordGrid guessedWords={guessedWords} currentGuess={currentGuess} turn={turn} />
@@ -49,5 +52,6 @@ export default function Wordle({ todaysWord, wordList, hints }) {
                 <KeyboardBottom usedKeys={usedKeys} />
             </div>
         </div>
+        </>
     );
 }

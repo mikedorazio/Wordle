@@ -1058,6 +1058,13 @@
       "show embarrassment",
       "turn red"
     ],
+    "board":[
+      "plank",
+      "beam",
+      "get on",
+      "enter",
+      "lodge"
+    ],
     "boars":[
       "wild swine",
       "big game",
@@ -2196,6 +2203,13 @@
       "bit of bread",
       "tiny morsel",
       "cookie morsel"
+    ],
+    "crush":[
+      "squash",
+      "squeeze",
+      "compress",
+      "distort in shape",
+      "supress"
     ],
     "crust":[
       "outer layer",
@@ -6308,6 +6322,12 @@
       "national zoo favorite",
       "asian mammal"
     ],
+    "panel":[
+      "console",
+      "board",
+      "advisory group",
+      "team"
+    ],
     "panic":[
       "lose it",
       "fall apart",
@@ -6373,6 +6393,13 @@
       "brief halt",
       "take a moment",
       "purpose of commas"
+    ],
+    "peace":[
+      "tranquility",
+      "calm",
+      "order",
+      "lawfulness",
+      "restfulness"
     ],
     "peaks":[
       "high points",
@@ -6509,6 +6536,12 @@
       "sound quality",
       "sales talk",
       "road-patching material"
+    ],
+    "pivot":[
+      "turn",
+      "rotate",
+      "axis",
+      "spin"
     ],
     "pixel":[
       "screen dot",
@@ -8512,6 +8545,13 @@
       "entangle",
       "net"
     ],
+    "snide":[
+      "disparaging",
+      "derogatory",
+      "unpleasant",
+      "deprecating",
+      "remark"
+    ],
     "snore":[
       "sleep sound",
       "night noise",
@@ -9046,6 +9086,12 @@
       "action scene feature",
       "daring feat",
       "daredevil display"
+    ],
+    "style":[
+      "manner",
+      "way",
+      "technique",
+      "method"
     ],
     "sucks":[
       "uses a straw",
@@ -10215,6 +10261,11 @@
       "ocean contents",
       "two hydrogen, one oxygen"
     ],
+    "weary":[
+      "tired",
+      "worn out",
+      "sleepy"
+    ],
     "wedge":[
       "squeeze",
       "jam in tightly",
@@ -10253,6 +10304,11 @@
       "common question starter",
       "choice word",
       "question of identity"
+    ],
+    "while":[
+      "for some time",
+      "duration",
+      "phase"
     ],
     "whine":[
       "engine sound",
